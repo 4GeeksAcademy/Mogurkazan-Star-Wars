@@ -12,6 +12,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			gente: [
+				{
+					uid: "FIRST",
+					name: "white",
+					initial: "white"
+				},
+				{
+					uid: "SECOND",
+					name: "white2",
+					initial: "white"
+				}
 			]
 		},
 		actions: {
@@ -23,6 +35,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				console.log('se cargo la pag')
+				fetch('https://www.swapi.tech/api/people/')
+				.then(response => response.json())
+				.then((data)=> setStore({ gente: data.results}))
 			},
 			changeColor: (index, color) => {
 				//get the store
