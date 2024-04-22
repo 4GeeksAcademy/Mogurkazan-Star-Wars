@@ -14,8 +14,8 @@ export const Home = () => {
 		.then((data)=> setPeople(data.results))
 	},[])
 	return (
-		<div className="cartas container d-flex text-center mt-5">
-			{store.gente.map( (item)=> <Prueba key={item.uid} uid={item.uid} title={item.name} />) }
+		<div className="cartas container d-flex overflow-auto text-center mt-5">
+			{store.gente.map( (item)=> <Prueba className="mx-3" key={item.uid} uid={item.uid} title={item.name} />) }
 			
 		</div>
 
