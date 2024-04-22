@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const TestVista = props => {
+export const TestVista = (props) => {
 	const { store, actions } = useContext(Context);
 	const [people, setPeople] = useState({})
 	const params = useParams();
@@ -14,19 +14,23 @@ export const TestVista = props => {
 				.then((data)=> setPeople( data.result.properties))
 	},[])
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This PERSON: {people.name} {params.testVista_id}</h1>
-
-			<hr className="my-4" />
-			<p>height: {people.height}</p>
-			<p>height: {people.mass}</p>
-			<p>height: {people.hair_color}</p>
-			<p>height: {people.gender}</p>
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
+		<div className="container">
+			<div className="row">
+				<div className="col-md-4">
+				<img className="img-fluid" src={`https://starwars-visualguide.com/assets/img/characters/${params.testVista_id}.jpg`} alt="..." />
+				</div>
+				<div className="col-md-8">
+					<h1 className="display-4"> {people.name}</h1>
+					<hr className="my-4" />
+					<p>Height: {people.height}</p>
+					<p>Mass: {people.mass}</p>
+					<p>Hair Color: {people.hair_color}</p>
+					<p>Gender: {people.gender}</p>
+					<Link to="/">
+						<span className="btn btn-primary btn-lg" role="button">Back Home</span>
+					</Link>
+				</div>
+			</div>
 		</div>
 	);
 };
