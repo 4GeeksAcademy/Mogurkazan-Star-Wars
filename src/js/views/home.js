@@ -1,9 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
-import { Gente } from "../component/people";
-import { Prueba } from "../component/probando";
+
+import { Characters } from "../component/characters";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -15,7 +14,7 @@ export const Home = () => {
 	},[])
 	return (
 		<div className="cartas container d-flex overflow-auto text-center mt-5">
-			{store.gente.map( (item)=> <Prueba className="mx-3" key={item.uid} uid={item.uid} title={item.name} />) }
+			{store.gente.map( (item)=> <Characters className="mx-3" key={item.uid} uid={item.uid} title={item.name} />) }
 			
 		</div>
 

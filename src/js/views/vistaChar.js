@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const TestVista = (props) => {
+export const VistaChar = (props) => {
 	const { store, actions } = useContext(Context);
 	const [people, setPeople] = useState({})
 	const params = useParams();
 	useEffect(()=>{
 		console.log('se cargo la pag')
-				fetch('https://www.swapi.tech/api/people/' + params.testVista_id)
+				fetch('https://www.swapi.tech/api/people/' + params.vistaChar_id)
 				.then(response => response.json())
 				.then((data)=> setPeople( data.result.properties))
 	},[])
@@ -17,7 +17,7 @@ export const TestVista = (props) => {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-4">
-				<img className="img-fluid" src={`https://starwars-visualguide.com/assets/img/characters/${params.testVista_id}.jpg`} alt="..." />
+				<img className="img-fluid" src={`https://starwars-visualguide.com/assets/img/characters/${params.vistaChar_id}.jpg`} alt="..." />
 				</div>
 				<div className="col-md-8">
 					<h1 className="display-4"> {people.name}</h1>
@@ -35,6 +35,6 @@ export const TestVista = (props) => {
 	);
 };
 
-TestVista.propTypes = {
+VistaChar.propTypes = {
 	match: PropTypes.object
 };
