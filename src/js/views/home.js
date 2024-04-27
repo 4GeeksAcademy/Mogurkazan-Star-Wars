@@ -1,21 +1,30 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 
 import { Characters } from "../component/characters";
+import { Starships } from "../component/starships";
+import { Planets } from "../component/planets";
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
-	const [people, setPeople] = useState([])
-	useEffect(()=>{
-		fetch('https://www.swapi.tech/api/people/')
-		.then(response => response.json())
-		.then((data)=> setPeople(data.results))
-	},[])
+	const { store, actions } = useContext(Context);	
 	return (
-		<div className="cartas container d-flex overflow-auto text-center mt-5">
-			{store.gente.map( (item)=> <Characters className="mx-3" key={item.uid} uid={item.uid} title={item.name} />) }
-			
+		<div className="container-fluid d-flex">
+			<div className="row">
+				<div className="cartas overflow-auto mt-5">
+					{store.gente.map( (item)=> <Characters className="col-2 mx-3" key={item.uid} uid={item.uid} title={item.name} />) }	
+				</div>
+			</div>
+			<div className="row">
+				<div className="cartas overflow-auto mt-5">
+					{store.naves.map( (item)=> <Starships className=" col-2 mx-3" key={item.uid} uid={item.uid} title={item.name} />) }	
+				</div>
+			</div>
+			<div className="row">
+				<div className="cartas overflow-auto mt-5">
+					{store.planets.map( (item)=> <Planets className=" col-2 mx-3" key={item.uid} uid={item.uid} title={item.name} />) }	
+				</div>
+			</div>
 		</div>
 
 	)

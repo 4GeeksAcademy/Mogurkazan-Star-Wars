@@ -10,6 +10,8 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { VistaChar } from "./views/vistaChar";
+import { VistaSS } from "./views/vistaSS";
+import { VistaPlanets } from "./views/vistaPlanets";
 
 
 //create your first component
@@ -29,6 +31,8 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="/vistaChar/:vistaChar_id" element={<VistaChar />} />
+						<Route path="/vistaSS/:vistaSS_id" element={<VistaSS />} />
+						<Route path="/vistaPlanets/:vistaPlanets_id" element={<VistaPlanets />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

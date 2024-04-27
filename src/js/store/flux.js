@@ -13,18 +13,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			gente: [
-				{
-					uid: "FIRST",
-					name: "white",
-					initial: "white"
-				},
-				{
-					uid: "SECOND",
-					name: "white2",
-					initial: "white"
-				}
-			]
+			gente: [],
+			naves:[],
+			planets:[]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -32,13 +23,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-				console.log('se cargo la pag')
+				//Fetch de los characters
+				console.log('se cargaron los pjs')
 				fetch('https://www.swapi.tech/api/people/')
 				.then(response => response.json())
 				.then((data)=> setStore({ gente: data.results}))
+				//Fetch de las naves
+				console.log('se cargaron las naves')
+				fetch('https://www.swapi.tech/api/starships/')
+				.then(response => response.json())
+				.then((data)=> setStore({ naves: data.results}))
+				//Fetch de los planetas
+				console.log('se cargaron los planetas')
+				fetch('https://www.swapi.tech/api/planets/')
+				.then(response => response.json())
+				.then((data)=> setStore({ planets: data.results}))
 			},
 			changeColor: (index, color) => {
 				//get the store
