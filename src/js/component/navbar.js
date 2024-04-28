@@ -22,7 +22,7 @@ export const Navbar = () => {
                             <li key={index} onClick={(e) => e.stopPropagation()}>
                                 <div className="d-flex align-items-center">
                                     <a className="dropdown-item">{chara}</a>
-                                    <button className="x btn-sm rounded-pill ms-auto text-end" onClick={() => actions.deleteFavs(index)}>X</button>
+                                    <button className="x btn-sm rounded-pill ms-auto text-end" onClick={() => actions.deleteFavs(index)}><i class="fa-solid fa-trash"></i></button>
                                 </div>
                             </li>
                         ))}

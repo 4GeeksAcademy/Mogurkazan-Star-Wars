@@ -64,6 +64,10 @@
    .cora text {
     font-size: 25px;
    }
+   .x {
+    border: none;
+    background-color: transparent;
+   }
 
 
  
