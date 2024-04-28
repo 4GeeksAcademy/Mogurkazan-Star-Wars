@@ -14,7 +14,7 @@ export const VistaChar = (props) => {
 				.then((data)=> setPeople( data.result.properties))
 	},[])
 	return (
-		<div className="container">
+		<div className="vista1 container">
 			<div className="row">
 				<div className="col-md-4">
 				<img className="img-fluid" src={`https://starwars-visualguide.com/assets/img/characters/${params.vistaChar_id}.jpg`} alt="..." />
