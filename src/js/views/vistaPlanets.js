@@ -17,7 +17,7 @@ export const VistaPlanets = (props) => {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-4">
-				<img className="img-fluid" src={`https://raw.githubusercontent.com/4GeeksAcademy/Mogurkazan-Star-Wars/master/src/img/characters/p${params.vistaPlanets_id}.jpg`} alt="..." />
+				<img className="img-fluid" src={`https://raw.githubusercontent.com/4GeeksAcademy/Mogurkazan-Star-Wars/master/src/img/planets/p${params.vistaPlanets_id}.jpg`} alt="..." />
 				</div>
 				<div className="col-md-8">
 					<h1 className="display-4"> {planet.name}</h1>
