@@ -2,12 +2,19 @@
     background-color: black;
     height: 100vh;
 }
+body {
+    background-color: black;
+}
 .letras {
     color: yellow;
 }
 .cartas {
     width: 200px;
     height: 350px;
+}
+.cartas img {
+    height: 250px;
+    width: 100%;
 }
 .caja {
     width: 1200px;
@@ -85,13 +92,13 @@
     height: auto;
    }
    .starwars {
-    --glow-color: rgb(217, 176, 255);
-    --glow-spread-color: rgba(49, 27, 69, 0.781);
-    --enhanced-glow-color: rgb(231, 206, 255);
-    --btn-color: rgb(100, 61, 136);
+    --glow-color: rgb(195, 246, 55);
+    --glow-spread-color: rgba(92, 108, 40, 0.781);
+    --enhanced-glow-color: rgb(233, 242, 128);
+    --btn-color: rgb(120, 156, 4);
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
-    color: var(--glow-color);
+    color: black;
     font-size: 15px;
     font-weight: bold;
     background-color: var(--btn-color);

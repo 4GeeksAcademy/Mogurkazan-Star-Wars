@@ -8,7 +8,7 @@ export const Navbar = () => {
 	
 
 	return (
-		<nav className="menu navbar navbar-dark  mb-3 fixed-top">
+		<nav className="menu navbar   mb-3 fixed-top">
 			<Link className="starwars" to="/">
 				<span className="navbar-brand mb-0 h1">STAR WARS</span>
 			</Link>
