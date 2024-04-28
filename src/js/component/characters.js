@@ -20,7 +20,7 @@ export const Characters = (props) => {
                         <span>More info</span>
                     </Link>
                     <button className="heart col-4" onClick={handleClick}>
-                        <i class="fa-solid fa-heart" style={{color: color}}></i>
+                        <i className="fa-solid fa-heart" style={{color: color}}></i>
                     </button>
                 </div>
                 
