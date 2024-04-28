@@ -12,6 +12,7 @@ export const Starships = (props) => {
                 <Link className="btn btn-primary" to={"/vistaSS/" + props.uid }>
 					<span>More info</span>
 				</Link>
+                <button onClick={()=>actions.getFavs(props.title)}>fav</button>
             </div>
         </div>
 	);

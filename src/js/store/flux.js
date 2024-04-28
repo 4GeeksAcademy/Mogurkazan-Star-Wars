@@ -26,7 +26,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getFavs: (name) => {
 				const store = getStore();
 				if(store.favorites.includes(name)){
-					console.log('ya está')
+					setStore({
+						favorites: store.favorites.filter((item)=> item != name)
+					});
 				}else{
 					setStore({
 						favorites: [...store.favorites, name]
