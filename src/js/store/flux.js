@@ -15,12 +15,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			gente: [],
 			naves:[],
-			planets:[]
+			planets:[],
+			favorites:[]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			getFavs: (name) => {
+				const store = getStore();
+				
+				setStore({
+					favorites: [...store.favorites, name]
+				});
 			},
 			loadSomeData: () => {
 				//Fetch de los characters

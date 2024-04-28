@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Starships = (props) => {
-    
+    const { store, actions } = useContext(Context);
 	return (
-		<div className="caja card ">
+		<div className="cartas card mx-3 ">
             <img src={`https://starwars-visualguide.com/assets/img/starships/${props.uid}.jpg`} className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
