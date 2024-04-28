@@ -25,10 +25,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getFavs: (name) => {
 				const store = getStore();
-				
-				setStore({
-					favorites: [...store.favorites, name]
-				});
+				if(store.favorites.includes(name)){
+					console.log('ya está')
+				}else{
+					setStore({
+						favorites: [...store.favorites, name]
+					});
+
+				}
 			},
 			loadSomeData: () => {
 				//Fetch de los characters
