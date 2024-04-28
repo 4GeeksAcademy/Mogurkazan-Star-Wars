@@ -39,6 +39,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				}
 			},
+			deleteFavs: (index) => {
+				const store = getStore();
+				const updatedFavorites = store.favorites.filter((item, i) => i !== index);
+				setStore({
+					favorites: updatedFavorites
+				});
+			},
 			loadSomeData: () => {
 				//Fetch de los characters
 				console.log('se cargaron los pjs')

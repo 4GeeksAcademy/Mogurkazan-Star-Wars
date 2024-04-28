@@ -5,6 +5,8 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+	
+
 	return (
 		<nav className="navbar navbar-dark bg-dark mb-3 fixed-top">
 			<Link to="/">
@@ -16,9 +18,15 @@ export const Navbar = () => {
 						Favoritos
 					</button>
 					<ul className="dropdown-menu">
-						<li><a className="dropdown-item" href="#">Mi lista</a></li>
-						{store.favorites.map((chara, index)=><li key={index}><a className="dropdown-item" href="#"/>{chara}</li>)}
-					</ul>
+                        {store.favorites.map((chara, index) => (
+                            <li key={index} onClick={(e) => e.stopPropagation()}>
+                                <div className="d-flex align-items-center">
+                                    <a className="dropdown-item">{chara}</a>
+                                    <button className="x btn-sm rounded-pill ms-auto text-end" onClick={() => actions.deleteFavs(index)}>X</button>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
 				</div>
 			</div>
 		</nav>
