@@ -17,7 +17,7 @@ export const VistaSS = (props) => {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-4">
-				<img className="img-fluid" src={`https://starwars-visualguide.com/assets/img/starships/${params.vistaSS_id}.jpg`} alt="..." />
+				<img className="img-fluid" src={`https://raw.githubusercontent.com/4GeeksAcademy/Mogurkazan-Star-Wars/master/src/img/characters/s${params.vistaSS_id}.jpg`} alt="..." />
 				</div>
 				<div className="col-md-8">
 					<h1 className="display-4"> {naves.name}</h1>
