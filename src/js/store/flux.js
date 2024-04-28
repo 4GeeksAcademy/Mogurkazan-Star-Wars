@@ -23,6 +23,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
+			exampleFunction: () => {
+				
+			},
 			getFavs: (name) => {
 				const store = getStore();
 				if(store.favorites.includes(name)){
