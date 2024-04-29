@@ -14,7 +14,7 @@ export const VistaSS = (props) => {
 				.then((data)=> setNaves( data.result.properties))
 	},[])
 	return (
-		<div className="container">
+		<div className="vista1 container">
 			<div className="row">
 				<div className="col-md-4">
 				<img className="img-fluid" src={`https://raw.githubusercontent.com/4GeeksAcademy/Mogurkazan-Star-Wars/master/src/img/starships/s${params.vistaSS_id}.jpg`} alt="..." />

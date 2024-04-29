@@ -4,6 +4,7 @@
 }
 body {
     background-color: black;
+    font-family: 'Anton', sans-serif;
 }
 .letras {
     color: yellow;
@@ -90,6 +91,10 @@ body {
    }
    .vista1 {
     height: auto;
+    color: #cfe90c;
+    margin-top: 200px;
+    margin-bottom: 80px;
+    
    }
    .starwars {
     --glow-color: rgb(195, 246, 55);

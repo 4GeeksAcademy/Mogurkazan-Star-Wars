@@ -14,7 +14,7 @@ export const VistaPlanets = (props) => {
 				.then((data)=> setPlanet( data.result.properties))
 	},[])
 	return (
-		<div className="container">
+		<div className="vista1 container">
 			<div className="row">
 				<div className="col-md-4">
 				<img className="img-fluid" src={`https://raw.githubusercontent.com/4GeeksAcademy/Mogurkazan-Star-Wars/master/src/img/planets/p${params.vistaPlanets_id}.jpg`} alt="..." />
