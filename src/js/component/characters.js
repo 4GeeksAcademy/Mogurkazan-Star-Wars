@@ -11,7 +11,7 @@ export const Characters = (props) => {
         actions.getFavs(props.title);
     };
 	return (
-		<div className="cartas card mx-3 ">
+		<div className="cartas card mx-3 p-0">
             <img src={`https://raw.githubusercontent.com/4GeeksAcademy/Mogurkazan-Star-Wars/master/src/img/characters/c${props.uid}.jpg`} className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
