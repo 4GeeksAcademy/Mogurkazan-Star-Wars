@@ -1,18 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			gente: [],
 			naves:[],
 			planets:[],
@@ -26,17 +14,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				
 			},
-			getFavs: (name) => {
+			getFavs: (name, category, index) => {
 				const store = getStore();
-				if(store.favorites.includes(name)){
-					setStore({
-						favorites: store.favorites.filter((item)=> item != name)
-					});
-				}else{
-					setStore({
-						favorites: [...store.favorites, name]
-					});
-
+				const { favorites } = store;
+				console.log(category)
+		
+				// Verificar si el favorito ya existe
+				const favoriteIndex = favorites.findIndex((fav) => fav.name === name && fav.category === category && fav.index === index);
+		
+				if (favoriteIndex !== -1) {
+					// Si el favorito ya existe, eliminarlo
+					const updatedFavorites = [...favorites.slice(0, favoriteIndex), ...favorites.slice(favoriteIndex + 1)];
+					setStore({ favorites: updatedFavorites });
+				} else {
+					// Si el favorito no existe, agregarlo
+					const newFavorite = { name, category, index };
+					setStore({ favorites: [...favorites, newFavorite] });
 				}
 			},
 			deleteFavs: (index) => {

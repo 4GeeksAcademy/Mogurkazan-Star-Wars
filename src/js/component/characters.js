@@ -8,7 +8,7 @@ export const Characters = (props) => {
     const handleClick = () => {
         const newColor = color === 'black' ? 'red' : 'black';
         setColor(newColor);
-        actions.getFavs(props.title);
+        actions.getFavs(props.title, 'characters', props.uid);
     };
 	return (
 		<div className="cartas card mx-3 p-0">
@@ -16,7 +16,7 @@ export const Characters = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
                 <div className="row">
-                    <Link className="sugus btn col-8 mx-1" to={"/vistaChar/" + props.uid }>
+                    <Link className="sugus btn col-8 mx-1" to={"/characters/" + props.uid }>
                         <span>More</span>
                     </Link>
                     <button className="heart col-4" onClick={handleClick}>
