@@ -16,7 +16,7 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				<div className="dropdown">
 					<button className="fav btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Favoritos
+						Favorites
 					</button>
 					<ul className="dropdown-menu">
                         {store.favorites.map((fav, index) => (
