@@ -16,8 +16,8 @@ export const Planets = (props) => {
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
                 <div className="row">
-                    <Link className="btn col-8 btn-primary mx-1" to={"/vistaPlanets/" + props.uid }>
-                        <span>More info</span>
+                    <Link className="sugus btn col-8 mx-1" to={"/vistaPlanets/" + props.uid }>
+                        <span>More</span>
                     </Link>
                     <button className="heart col-4" onClick={handleClick}>
                         <i className="fa-solid fa-heart" style={{color: color}}></i>

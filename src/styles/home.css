@@ -17,6 +17,14 @@ body {
     height: 250px;
     width: 100%;
 }
+.card-body {
+    height: 100px;
+}
+.card-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .caja {
     width: 1200px;
 }
@@ -160,5 +168,33 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #cfe90c; /* Color del indicador de desplazamiento al pasar el cursor */
 }
-
+.sugus {
+    width: 100px;
+    height: 40px;
+    padding-bottom: 4px;
+    font-weight: 700;
+    background: rgb(242, 246, 4);
+    color: black;
+    border-radius: .5rem;
+    border-bottom: 2px solid rgb(6, 5, 7);
+    border-right: 2px solid rgb(9, 6, 11);
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+   }
+   
+   .sugus:hover {
+    border-top: 2px solid rgb(240, 241, 236);
+    border-left: 2px solid rgb(230, 232, 225);
+    border-bottom: 2px solid rgb(195, 241, 7);
+    border-right: 2px solid rgb(195, 241, 7);
+    background: rgb(11, 11, 5);
+    color: #cfe90c;
+    box-shadow: rgba(227, 240, 46, 0.4) 5px 5px, rgba(214, 243, 29, 0.3) 10px 10px, rgba(233, 240, 46, 0.2) 15px 15px;
+   }
  

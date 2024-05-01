@@ -21,7 +21,7 @@ export const Navbar = () => {
                         {store.favorites.map((chara, index) => (
                             <li key={index} onClick={(e) => e.stopPropagation()}>
                                 <div className="d-flex align-items-center">
-                                    <a className="dropdown-item">{chara}</a>
+                                    <a className="dropdown-item" href="#scrollspyHeading3">{chara}</a>
                                     <button className="x btn-sm rounded-pill ms-auto text-end" onClick={() => actions.deleteFavs(index)}><i class="fa-solid fa-trash"></i></button>
                                 </div>
                             </li>
