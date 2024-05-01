@@ -4,7 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			gente: [],
 			naves:[],
 			planets:[],
-			favorites:[]
+			favorites:[],
+			color: "black"
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -13,6 +14,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			exampleFunction: () => {
 				
+			},
+			handleClick: (color, props) => {
+				const newColor = color === 'black' ? 'red' : 'black';
+        		setStore({color:newColor});
+        		actions.getFavs(props.title, 'characters', props.uid);
 			},
 			getFavs: (name, category, index) => {
 				const store = getStore();
